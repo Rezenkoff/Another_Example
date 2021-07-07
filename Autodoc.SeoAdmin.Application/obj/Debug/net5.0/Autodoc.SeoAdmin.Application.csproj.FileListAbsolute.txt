@@ -1,0 +1,15 @@
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Application\bin\Debug\net5.0\Autodoc.SeoAdmin.Application.deps.json
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Application\bin\Debug\net5.0\Autodoc.SeoAdmin.Application.dll
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Application\bin\Debug\net5.0\ref\Autodoc.SeoAdmin.Application.dll
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Application\bin\Debug\net5.0\Autodoc.SeoAdmin.Application.pdb
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Application\bin\Debug\net5.0\Autodoc.SeoAdmin.Domain.dll
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Application\bin\Debug\net5.0\Autodoc.SeoAdmin.Domain.pdb
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Application\obj\Debug\net5.0\Autodoc.SeoAdmin.Application.csprojAssemblyReference.cache
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Application\obj\Debug\net5.0\Autodoc.SeoAdmin.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Application\obj\Debug\net5.0\Autodoc.SeoAdmin.Application.AssemblyInfoInputs.cache
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Application\obj\Debug\net5.0\Autodoc.SeoAdmin.Application.AssemblyInfo.cs
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Application\obj\Debug\net5.0\Autodoc.SeoAdmin.Application.csproj.CoreCompileInputs.cache
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Application\obj\Debug\net5.0\Autodoc.SeoAdmin.Application.csproj.CopyComplete
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Application\obj\Debug\net5.0\Autodoc.SeoAdmin.Application.dll
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Application\obj\Debug\net5.0\ref\Autodoc.SeoAdmin.Application.dll
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Application\obj\Debug\net5.0\Autodoc.SeoAdmin.Application.pdb

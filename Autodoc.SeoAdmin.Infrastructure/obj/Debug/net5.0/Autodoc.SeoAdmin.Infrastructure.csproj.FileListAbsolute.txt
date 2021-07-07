@@ -1,0 +1,17 @@
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\bin\Debug\net5.0\Autodoc.SeoAdmin.Infrastructure.deps.json
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\bin\Debug\net5.0\Autodoc.SeoAdmin.Infrastructure.dll
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\bin\Debug\net5.0\ref\Autodoc.SeoAdmin.Infrastructure.dll
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\bin\Debug\net5.0\Autodoc.SeoAdmin.Infrastructure.pdb
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\bin\Debug\net5.0\Autodoc.SeoAdmin.Application.dll
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\bin\Debug\net5.0\Autodoc.SeoAdmin.Domain.dll
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\bin\Debug\net5.0\Autodoc.SeoAdmin.Application.pdb
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\bin\Debug\net5.0\Autodoc.SeoAdmin.Domain.pdb
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\obj\Debug\net5.0\Autodoc.SeoAdmin.Infrastructure.csprojAssemblyReference.cache
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\obj\Debug\net5.0\Autodoc.SeoAdmin.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\obj\Debug\net5.0\Autodoc.SeoAdmin.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\obj\Debug\net5.0\Autodoc.SeoAdmin.Infrastructure.AssemblyInfo.cs
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\obj\Debug\net5.0\Autodoc.SeoAdmin.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\obj\Debug\net5.0\Autodoc.SeoAdmin.Infrastructure.csproj.CopyComplete
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\obj\Debug\net5.0\Autodoc.SeoAdmin.Infrastructure.dll
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\obj\Debug\net5.0\ref\Autodoc.SeoAdmin.Infrastructure.dll
+C:\Users\aleksandr.rezenkov\Documents\Projects\Autodoc.SeoAdmin.API\Autodoc.SeoAdmin.Infrastructure\obj\Debug\net5.0\Autodoc.SeoAdmin.Infrastructure.pdb
