@@ -1,0 +1,6 @@
+<div class="dropdown">
+    <input placeholder="{{placeholder}}" [(ngModel)]="searchString" (click)="showDropdown()" (ngModelChange)="filter()">
+    <div *ngIf="dropdownShown" class="dropdown-content">
+        <span (click)="selectValue(option)" *ngFor="let option of (optionsList$ | async)" style="cursor:pointer">{{option.key}}</span>
+    </div>
+</div>

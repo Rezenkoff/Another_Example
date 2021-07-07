@@ -1,0 +1,32 @@
+<sales-target-popup *ngIf="(salesTargetPopupEnabled$ | async)"
+                    [mode]="popupMode"
+                    [salesTargetModel]="selectedModel"
+                    (onPopupClose)="closeSalesTargetPopup()"
+                    (onSubmit)="saveSalesTarget($event)">
+</sales-target-popup>
+
+<div class="container-fluid">
+    <br>
+    <button class="btn btn-primary" (click)="addSalesTargetModel()">Создать цель</button>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr style="background-color:darkgrey">
+                <th>Год</th>
+                <th>Месяц</th>
+                <th>Цель (грн)</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let model of (salesTargets$ | async)">
+                <td>{{model.year}}</td>
+                <td>{{model.month}}</td>
+                <td>{{model.plannedSalesSumm}}</td>
+                <td>
+                    <button *ngIf="editAllowed(model)" class="btn btn-sm btn-primary" (click)="editSalesTargetModel(model)">Изменить</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

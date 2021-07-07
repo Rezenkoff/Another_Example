@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+.color-green {
+    color: green;
+}
+
+.color-red {
+    color: red;
+}
+
+.lost-call-rate-column {
+    border-style: solid
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.width100 {
+    width: 100%;
+}

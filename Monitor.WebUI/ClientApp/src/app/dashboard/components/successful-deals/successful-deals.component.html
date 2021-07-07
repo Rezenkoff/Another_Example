@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-lg-6 col-xs-6 salesbyday">
+        <div class="salesbyday__title">% Успешных сделок</div>
+        <div class="toogle-time">
+            <div (click)="toogleTime()" [ngClass]="getStyle('day')">день</div>
+            <div (click)="toogleTime()" [ngClass]="getStyle('month')">месяц</div>
+        </div>       
+        <div class="managers-list">
+            <div class="manager-data">
+                <div *ngIf="successfullDeals.managerList.length == 0">Loading...</div>
+                <table *ngIf="isDay">
+                    <tbody>
+                        <tr *ngFor="let manager of successfullDeals.managerList; let i = index">
+                            <td class="manager-count">{{i + 1}}</td>
+                            <td>
+                                <img *ngIf="manager.photoUrl.length > 0" src="{{manager.photoUrl}}" alt="photo" />
+                                <img *ngIf="manager.photoUrl.length == 0" src="https://cdn.autodoc.ua/images/telemarketer.svg" alt="photo" />
+                            </td>
+                            <td class="manager-name">{{manager.name}}</td>
+                            <td class="show-tooltip">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" [style.width.%]="progressManagerDay[i]">
+                                        <span>{{progressManagerDay[i]}} %</span>
+                                    </div>
+                                </div>
+                                <div class="tolltip-manager">
+                                    <div>{{manager.successfullDealsDay}} шт.</div>
+                                    <div>{{(manager.successfullDealsDayMoney | number).replace(',',' ')}} грн.</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table *ngIf="!isDay">
+                    <tbody>
+                        <tr *ngFor="let manager of successfullDeals.managerList; let i = index">
+                            <td class="manager-count">{{i + 1}}</td>
+                            <td>
+                                <img *ngIf="manager.photoUrl.length > 0" src="{{manager.photoUrl}}" alt="photo" />
+                                <img  *ngIf="manager.photoUrl.length == 0" src="https://cdn.autodoc.ua/images/telemarketer.svg" alt="photo" />
+                            </td>
+                            <td class="manager-name">{{manager.name}}</td>
+                            <td class="show-tooltip">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" [style.width.%]="progressManagerMonth[i]">
+                                        <span>{{progressManagerMonth[i]}} %</span>
+                                    </div>
+                                </div>
+                                <div class="tolltip-manager">
+                                    <div>{{manager.successfullDealsMonth}} шт.</div>
+                                    <div>{{(manager.successfullDealsMonthMoney | number).replace(',',' ')}} грн.</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>

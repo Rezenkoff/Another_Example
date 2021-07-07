@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>Вход</h2>
+    <div>
+        <div class="form-group">
+            <label for="username">Логин (0971112233)</label>
+            <input #loginInput type="tel" class="form-control" [(ngModel)]="loginModel.phone" maxlength="10" (ngModelChange)="onLoginInput()"/>
+        </div>
+        <div class="form-group">
+            <label for="password">Пароль</label>
+            <input #passwordInput type="password" class="form-control" [(ngModel)]="loginModel.password" (keyup.enter)="login()"/>
+        </div>
+        <div class="form-group">
+            <button [disabled]="isLoginning" class="btn btn-primary" (click)="login()">
+                <span *ngIf="isLoginning" class="spinner-border spinner-border-sm mr-1"></span>
+                Вход
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div>
+    <div class="salesbyday__title">LCR (Lost Call Rate)</div>
+    <div style="padding: 0px 15px 0px 15px; background-color:white;" (mouseover)="changeTooltipShowing()" (mouseout)="changeTooltipShowing()">
+        <div class="row">
+            <div class="col-xs-6 col-lg-6 col-md-6 lost-call-rate-column">
+                <div class="data-conversion">
+                    {{(lostCallRate$ | async).hourRate}}%
+                    <i class="fas" [ngClass]="{'fa-arrow-up color-green': (lostCallRate$ | async).hourRate <= 5, 'fa-arrow-down color-red': (lostCallRate$ | async).hourRate > 5}"></i>
+                </div>
+                <h4 class="text-align-center">За час</h4>
+            </div>
+            <div class="col-xs-6 col-lg-6 col-md-6 lost-call-rate-column">
+                <div class="data-conversion">
+                    {{(lostCallRate$ | async).dayRate}}%
+                    <i class="fas" [ngClass]="{'fa-arrow-up color-green': (lostCallRate$ | async).dayRate <= 5, 'fa-arrow-down color-red': (lostCallRate$ | async).dayRate > 5}"></i>
+                </div>
+                <h4 class="text-align-center">Сегодня</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-lg-6 col-md-6 lost-call-rate-column">
+                <div class="data-conversion">
+                    {{(lostCallRate$ | async).monthRate}}%
+                    <i class="fas" [ngClass]="{'fa-arrow-up color-green': (lostCallRate$ | async).monthRate <= 5, 'fa-arrow-down color-red': (lostCallRate$ | async).monthRate > 5}"></i>
+                </div>
+                <h4 class="text-align-center">Текущий месяц</h4>
+            </div>
+            <div class="col-xs-6 col-lg-6 col-md-6 lost-call-rate-column">
+                <div class="data-conversion">
+                    {{(lostCallRate$ | async).previousMonthRate}}%
+                    <i class="fas" [ngClass]="{'fa-arrow-up color-green': (lostCallRate$ | async).previousMonthRate <= 5, 'fa-arrow-down color-red': (lostCallRate$ | async).previousMonthRate > 5}"></i>
+                </div>
+                <h4 class="text-align-center">Прошлый месяц</h4>
+            </div>
+        </div>
+        <div class="row">
+            <button *ngIf="isShowTooltip" class="btn btn-secondary width100" data-placement="right" type="button">Рекомендуемый показатель не более 5%.</button>
+        </div>
+    </div>
+</div>

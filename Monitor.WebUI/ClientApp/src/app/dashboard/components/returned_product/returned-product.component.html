@@ -1,0 +1,18 @@
+<div>
+    <div class="salesbyday__title">Возвраты за месяц</div>
+    <div class="returned">
+        <div class="returned-flex">
+            <div class="returned-name">Возвраты от ВД</div>
+            <div class="returned-data">{{getReturnedVD(returnedMonth$ | async)}}%</div>
+        </div>
+        <div class="returned-flex">
+            <div class="returned-name">Возвраты</div>
+            <div class="returned-data">{{getReturned(returnedMonth$ | async)}}%</div>
+        </div>
+        <div class="returned-flex">
+            <div class="returned-name">Автовозвраты</div>
+            <div class="returned-data">{{getAutoReturned(returnedMonth$ | async)}}%</div>
+        </div>
+    </div>
+</div>
+

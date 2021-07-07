@@ -1,0 +1,24 @@
+<div class="modal">
+    <div class="modal-content">
+        <span (click)="close()" class="close">&times;</span>
+        <p *ngIf="mode == 'edit'">Год: {{salesTargetModel?.year}}</p>
+        <dropdown *ngIf="mode == 'add'"
+                  [placeholder]="'Год'"
+                  [options]="yearOptions"
+                  [selectedOptionKey]="salesTargetModel?.year"
+                  (onOptionSelect)="setYear($event)">
+        </dropdown>
+        <p *ngIf="mode == 'edit'">Месяц: {{salesTargetModel?.month}}</p>
+        <dropdown *ngIf="mode == 'add'"
+                  [placeholder]="'Месяц'"
+                  [options]="monthOptions"
+                  [selectedOptionKey]="salesTargetModel?.month"
+                  (onOptionSelect)="setMonth($event)">
+        </dropdown>
+        <input [(ngModel)]="salesTargetModel.plannedSalesSumm" (ngModelChange)="validate()" type="number" placeholder="Цель (грн)">
+        <div *ngIf="(disableReason$ | async)"class="alert alert-danger">
+            {{disableReason$ | async}}
+        </div>
+        <button class="apply-btn" [disabled]="!modelIsValid" (click)="submit()">Установить</button>
+    </div>
+</div>

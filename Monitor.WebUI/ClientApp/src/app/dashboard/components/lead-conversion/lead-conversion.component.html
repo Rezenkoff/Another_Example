@@ -1,0 +1,15 @@
+<div class="salesbyday__title">Конверсия сделок</div>
+<div class="salesbyday__progresbar">
+    <div class="conversion">
+        <div class="conversion__box">
+            <div class="yellow-box">день</div>
+            <div class="data-conversion">{{conversionDay}} %</div>
+            <p class="tolltip-conversion">{{(_conversionModel$ | async).succesfulDealsDay}} / {{(_conversionModel$ | async).allDealsDay}}</p>
+        </div>
+        <div class="conversion__box">
+            <div class="yellow-box">месяц</div>
+            <div class="data-conversion">{{conversionMonth}} %</div>
+            <p class="tolltip-conversion">{{((_conversionModel$ | async).succesfulDealsMonth | number).replace(',',' ')}} / {{((_conversionModel$ | async).allDealsMonth | number).replace(',',' ')}}</p>
+        </div>
+    </div>
+</div>

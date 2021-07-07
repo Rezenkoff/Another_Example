@@ -1,0 +1,142 @@
+<div class="container-fluid" style="padding-top: 20px;">
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+            <div class="well with-header">
+                <div class="header bg-blue">
+                    Продажи
+                </div>
+                <table class="table" style="text-align: center;">
+                    <thead class="bordered-darkorange">
+                        <tr>
+                            <th style="width:12%;">Новый</th>
+                            <th style="width:12%;">В работе</th>
+                            <th style="width:12%;">Ожидает оплаты</th>
+                            <th style="width:12%;">Готов к отгрузке</th>
+                            <th style="width:12%;">В пути</th>
+                            <th style="width:12%;">Готов к выдаче</th>
+                            <th style="width:12%;">Выдан за последние 5 дней</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    {{(_dealsModel$ | async).newDealsCount}} шт
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [style.width.%]="((_dealsModel$ | async).newDealsCount/(_dealsModel$ | async).total)*100"></div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    {{(_dealsModel$ | async).inWorkDealsCount}} шт
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [style.width.%]="((_dealsModel$ | async).inWorkDealsCount/(_dealsModel$ | async).total)*100"></div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    {{(_dealsModel$ | async).awaitingPaymentDealsCount}} шт
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [style.width.%]="((_dealsModel$ | async).awaitingPaymentDealsCount/(_dealsModel$ | async).total)*100"></div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    {{(_dealsModel$ | async).preparingToShipDealsCount}} шт
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [style.width.%]="((_dealsModel$ | async).preparingToShipDealsCount/(_dealsModel$ | async).total)*100"></div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    {{(_dealsModel$ | async).inTransitDealsCount}} шт
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [style.width.%]="((_dealsModel$ | async).inTransitDealsCount/(_dealsModel$ | async).total)*100"></div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    {{(_dealsModel$ | async).readyForExtraditionDealsCount}} шт
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [style.width.%]="((_dealsModel$ | async).readyForExtraditionDealsCount/(_dealsModel$ | async).total)*100"></div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    {{(_dealsModel$ | async).issuedDealsCount}} шт
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [style.width.%]="((_dealsModel$ | async).issuedDealsCount/(_dealsModel$ | async).total)*100"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-xs-6">
+            <div class="databox radius-bordered databox-shadowed databox-graded databox-vertical">
+                <div class="databox-top no-padding">
+                    <div class="databox-row" #customLoadingTemplate>
+                        <div class="databox-cell cell-6 text-align-center bg-azure" style="position: relative">
+                            <span class="databox-number">{{ (_sessionCount$ | async).sessionByDay }}</span>
+                            <span class="databox-text">Визиты в день</span>
+                            <ngx-ui-loader *ngIf="(_sessionCount$ | async).loading" fgsSize="28" [loaderId]="'visits-by-day'"></ngx-ui-loader>
+                        </div>
+                        <div class="databox-cell cell-6 text-align-center bg-sky" style="position: relative">
+                            <span class="databox-number">{{ (_sessionCount$ | async).sessionByMonth}}</span>
+                            <span class="databox-text">Визиты в месяц</span>
+                            <ngx-ui-loader *ngIf="(_sessionCount$ | async).loading" fgsSize="28" [loaderId]="'visits-by-month'"></ngx-ui-loader>
+                        </div>
+                    </div>
+                </div>
+                <div class="databox-bottom" (mouseover)="chengeShowToolTip()" (mouseout)="chengeShowToolTip()">
+                    <span class="databox-text">{{(_sessionCount$ | async).sessionRatio}}% от {{(_sessionCount$ | async).sessionByDayWeekAgo}}</span>
+                    <div class="progress progress-sm">
+                        <div class="progress-bar progress-bar-azure" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" [style.width.%]="(_sessionCount$ | async).sessionRatio">
+                        </div>
+                    </div>
+                    <button *ngIf="goToShowTooltip()" class="btn btn-secondary" data-placement="right" type="button">Соотношение визитов сегодня к макс кол-ву за 10 дней</button>
+                </div>
+            </div>
+            <div *ngIf="(_dealsModel$ | async).requestReturnCount > 0" class="databox radius-bordered databox-shadowed databox-graded databox-vertical">
+                <div class="databox-top no-padding">
+                    <div class="databox-row">
+                        <div>
+                            <span class="databox-number return-red">Запрос на возврат {{(_dealsModel$ | async).requestReturnCount}} шт.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-xs-6">
+            <returned-product></returned-product>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-xs-6 salesbyday">
+            <sales-day-month></sales-day-month>
+        </div>
+        <div class="col-lg-6 col-xs-6">
+            <lost-call-rate></lost-call-rate>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-xs-6 salesbyday">
+            <lead-conversion></lead-conversion>
+        </div>
+        <div class="col-lg-6 col-xs-6">
+            <average-check></average-check>
+        </div>
+    </div>
+
+    <successful-deals></successful-deals>
+</div>

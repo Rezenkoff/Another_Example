@@ -1,0 +1,23 @@
+<div class="salesbyday__title">Средний чек</div>
+<div class="salesbyday__progresbar">
+    <div class="conversion">
+        <div class="conversion__box">
+            <div class="green-box">день</div>
+            <div class="data-conversion">{{averageCheckByDay}} грн</div>
+            <p class="tolltip-conversion" style="height:auto;">
+                {{ (_salesByDayAndMonth$ | async).sumSalesByToday18_Yesterday18 }} грн
+                <br />
+                {{ (_salesByDayAndMonth$ | async).countSalesByToday18_Yesterday18 }} шт
+            </p>
+        </div>
+        <div class="conversion__box">
+            <div class="green-box">месяц</div>
+            <div class="data-conversion">{{averageCheckByMonth}} грн</div>
+            <p class="tolltip-conversion" style="height:auto;">
+                {{ (_salesByDayAndMonth$ | async).sumSalesByMonth }} грн
+                <br />
+                {{ (_salesByDayAndMonth$ | async).countSalesByMonth }} шт
+            </p>
+        </div>
+    </div>
+</div>

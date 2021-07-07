@@ -1,0 +1,33 @@
+<div class="container-fluid" style="margin-top: 2%; cursor: pointer">
+    
+    <button *ngIf="!displayOkChecks" (click)="showAllChecks()" class="btn btn-sm btn-success margin-bottom-10">{{ 'Показать чеки в статусе "OK"' }}</button>
+    <button *ngIf="displayOkChecks" (click)="hideOkChecks()" class="btn btn-sm btn-success margin-bottom-10">{{ 'Скрыть чеки в статусе "OK"' }}</button>
+    <div class="row no-margin-right no-margin-left" >           
+        <div class="col-sm-1" (click)="orderBy('priority')">
+            {{ 'Приоритет' }}
+        </div>
+        <div class="col-sm-2" (click)="orderBy('service')">
+            {{ 'Проверка' }}
+        </div>
+        <div class="col-sm-1" (click)="orderBy('status')">
+            {{ 'Статус' }}
+        </div>
+        <div class="col-sm-2" (click)="orderBy('lastRun')">
+            {{ 'Последний запуск' }}
+        </div>
+        <div class="col-sm-2" (click)="orderBy('inCurrent')">
+            {{ 'В текущем статусе c' }}
+        </div>
+        <div class="col-sm-3" (click)="orderBy('description')">
+            {{ 'Описание' }}
+        </div>
+        <div class="col-sm-1">
+            {{ 'Действия' }}
+        </div>
+    </div>
+        
+    <div *ngFor="let check of checks$ | async">
+        <check [check]="check" (onManualRun)="runManualCheck($event)"></check>
+    </div>
+    
+</div>

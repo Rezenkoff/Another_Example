@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Monitor.WebUI": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
